@@ -1,5 +1,4 @@
 #Libraries
-from newspaper import  Article
 import string
 import re
 import  random
@@ -30,11 +29,13 @@ def botResponse():
     #Getting user query
     user_query = request.args.get('msg')
 
-    #Getting Contents/Articles
-    url = 'article.html'
+    #Getting Contents/Articles using BeautifulSoup
+    url = 'article.html' #You can create your html file or use any webiste to scrap data
     page = open(url)
     soup = BeautifulSoup(page.read())
     corpus = soup.get_text()
+    
+    
 
 
 
